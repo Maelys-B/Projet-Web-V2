@@ -65,6 +65,11 @@ $lampe = $stmt->fetch(PDO::FETCH_ASSOC);
             <a href="index.php?page=booking&id=<?= $lampe['id'] ?>" class="btn-acheter">
                 Réserver cette lampe
             </a>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'): ?>
+                <a class="admin-link" href="index.php?page=update-lamps&id=<?= $lampe['id'] ?>">
+                Mettre à jour la lumière
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </div>

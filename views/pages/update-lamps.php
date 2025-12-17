@@ -46,6 +46,16 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     >
                 </label>
 
+                <label>
+                    Prix
+                    <input 
+                        type="number" 
+                        step="0.01" 
+                        name="price"
+                        value="<?= htmlspecialchars($lumieres['price'] ?? '') ?>"
+                    >
+                </label>
+
                 </label>
 
                 <label>
@@ -64,6 +74,13 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         name="img_hover"
                         value="<?= htmlspecialchars($lumieres['img_hover'] ?? '') ?>"
                     >
+                </label>
+
+                <label>
+                    Sous-catégorie
+                    <input 
+                        type="text" 
+                        name="sub_category">
                 </label>
 
             </fieldset>
