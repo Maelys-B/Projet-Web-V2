@@ -1,19 +1,8 @@
-<link rel="stylesheet" href="assets/home-lamp.css">
 <?php
-
-try {
-    $pdo = new PDO("mysql:host=localhost;dbname=galerie_lampes;charset=utf8", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
-
-$stmt = $pdo->query("SELECT * FROM lamps ORDER BY id DESC");
-$allLamps = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
-$filterCategory = isset($_GET['category']) ? $_GET['category'] : '';
+include('models/lampe/lamps.php');
 ?>
+
+<link rel="stylesheet" href="assets/home-lamp.css">
 
 <div class="shop-container">
     
