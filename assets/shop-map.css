@@ -1,0 +1,144 @@
+.showcase {
+    position: relative;
+    height: 80vh;
+}
+
+.showcase img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Rubik Beastly', cursive;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    text-shadow: 1px 1px rgba(0,0,0,0.1), -1px -1px rgba(0,0,0,0.05);
+    animation: floatText 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(-1deg); }
+    100% { transform: translateY(4px) rotate(1deg); }
+}
+
+.shop-page {
+    padding: 80px 60px;
+}
+
+.shop-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.shop-map {
+    width: 100%;
+    height: 420px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.shop-info h1 {
+    font-family: 'Rubik Beastly', cursive;
+    font-size: 2.2rem;
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.shop-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.hours {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.shop-description {
+    max-width: 900px;
+    font-size: 1.05rem;
+    text-align: center;
+    line-height: 1.6;
+    color: #555;
+}
+
+.description{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.shop-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px;
+}
+
+.shop-gallery img {
+    width: 100%;
+    height: 600PX;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.shop-gallery img:hover {
+  transform: scale(1.04);
+}
+
+
+@media (max-width: 900px) {
+  .shop-top {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-map {
+    height: 320px;
+  }
+
+  .shop-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .info-block {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.info-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.info-col h3 {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.info-col p {
+    font-size: 1rem;
+    color: #111;
+    line-height: 1.6;
+}

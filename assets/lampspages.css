@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0e0e1a;
+  color: white;
+  font-family: cursive;
+}
+
+/* Conteneur principal */
+.lumiere {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* Titre */
+.lumiere h1 {
+  text-align: center;
+  font-size: 42px;
+  -webkit-text-stroke: 0.6px rgb(255, 154, 154);
+  margin-bottom: 40px;
+}
+
+/* Bloc image + texte */
+.lumiere-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Image à gauche */
+.lumiere-content img {
+  width: 45%;
+  border-radius: 14px;
+}
+
+/* Texte à droite */
+.lumiere-text {
+  width: 55%;
+}
+
+.lumiere-text p {
+  -webkit-text-stroke: 0.5px rgb(255, 154, 154);
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Bouton admin */
+.admin-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: rgb(14, 14, 26);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.admin-link:hover {
+  background-color: rgb(251, 123, 88);
+}
+
+/* Responsive simple */
+@media (max-width: 768px) {
+  .lumiere-content {
+    flex-direction: column;
+  }
+
+  .lumiere-content img,
+  .lumiere-text {
+    width: 100%;
+  }
+
+  .lumiere-text p {
+    text-align: center;
+  }
+}

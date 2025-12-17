@@ -1,0 +1,139 @@
+.form h1{
+    font-family: 'Rubik Beastly', cursive;
+    font-size: 4rem;
+    -webkit-text-stroke: 0.5px rgb(255, 154, 154);
+    padding:20px;
+}
+
+fieldset{
+  border: 6px solid rgb(255, 154, 154 ); 
+  border-radius: 20px;
+  padding: 40px;
+
+}
+
+.module input{
+  width: 250px;
+  height: 55px;
+  background-color: #fff;
+  border: 6px solid rgb(255, 154, 154 );
+  border-radius: 20px;      
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.module input:hover{
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 6px 6px 18px rgba(255, 77, 77, 0.7);
+}
+
+.module a{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.f-name {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.l-name {
+    grid-column: 2;
+    grid-row: 1;
+}
+.email {
+    grid-column: 1;
+    grid-row: 2;
+}
+.tel {
+    grid-column: 2;
+    grid-row: 2;
+}
+.password {
+    grid-column: 1;
+    grid-row: 3;
+}
+.c-password {
+    grid-column: 2 ;
+    grid-row: 3;
+}
+
+.connection-module input{
+    width: 100%;
+}
+
+.form label{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik Beastly', cursive;
+    -webkit-text-stroke: 0.5px rgb(255, 154, 154);
+    margin-bottom: 15px; 
+    gap: 8px;            
+}
+
+input[type=submit]{
+    font-family: 'Rubik Beastly', cursive;
+    -webkit-text-stroke: 0.5px rgb(255, 154, 154);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+input[type=submit]:hover {
+  background: rgb(251, 123, 88);
+  background: linear-gradient(270deg, rgba(251, 123, 88, 0.681) 0%, rgba(255, 210, 96, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+@media (max-width: 768px) {
+
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  fieldset {
+    padding: 20px;
+    border-width: 4px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .f-name, .l-name, .email, .tel, .password, .c-password {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .module input {
+    width: 100%;
+    height: 50px;
+  }
+
+  input[type=submit] {
+    font-size: 1.1rem;
+  }
+
+  .module a {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

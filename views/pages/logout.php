@@ -1,0 +1,1 @@
+<?php include('models/lampe/logout.php')?>
